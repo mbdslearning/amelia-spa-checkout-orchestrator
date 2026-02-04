@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  php:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php: [ '8.1', '8.2', '8.3' ]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          tools: composer
+      - name: Install Composer dependencies
+        run: composer install --no-interaction --no-progress
+      - name: PHPCS
+        run: composer lint
+      - name: PHPStan
+        run: composer stan
+      - name: PHPUnit
+        run: composer test

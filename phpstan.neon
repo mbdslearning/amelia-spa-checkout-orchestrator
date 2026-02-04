@@ -1,0 +1,13 @@
+parameters:
+  level: 6
+  paths:
+    - src
+  excludes_analyse:
+    - vendor
+  bootstrapFiles:
+    - vendor/autoload.php
+  ignoreErrors:
+    - '#Call to an undefined function wc_.*#'
+    - '#Call to an undefined method WC_.*#'
+    - '#Call to an undefined function add_action#'
+    - '#Call to an undefined function add_filter#'

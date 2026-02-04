@@ -1,0 +1,15 @@
+{
+  "name": "amelia-spa-checkout-orchestrator",
+  "private": true,
+  "version": "2.0.0",
+  "description": "Build assets for Amelia SPA Checkout Orchestrator",
+  "scripts": {
+    "build": "wp-scripts build",
+    "start": "wp-scripts start",
+    "lint:js": "wp-scripts lint-js",
+    "format": "wp-scripts format"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^27.0.0"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "amelia/spa-checkout-orchestrator",
+  "description": "Headless redirect checkout bridge for Amelia → Woo Cart → Store API Checkout → PayMongo Checkout Session (gateway: paymongo_checkout).",
+  "type": "wordpress-plugin",
+  "license": "proprietary",
+  "require": {
+    "php": ">=8.1",
+    "psr/log": "^3.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^10.5",
+    "wp-coding-standards/wpcs": "^3.0",
+    "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+    "phpstan/phpstan": "^1.11"
+  },
+  "autoload": {
+    "psr-4": {
+      "Amelia\\\\SpaCheckoutOrchestrator\\\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Amelia\\\\SpaCheckoutOrchestrator\\\\Tests\\\\": "tests/"
+    }
+  },
+  "scripts": {
+    "lint": "phpcs",
+    "stan": "phpstan analyse",
+    "test": "phpunit"
+  },
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  }
+}

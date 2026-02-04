@@ -1,0 +1,20 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "amelia-spa-checkout-orchestrator/checkout-link",
+  "title": "Amelia SPA Checkout Link",
+  "category": "widgets",
+  "icon": "external",
+  "description": "Outputs a link to the Amelia SPA Checkout endpoint slug.",
+  "textdomain": "amelia-spa-checkout-orchestrator",
+  "attributes": {
+    "label": {
+      "type": "string",
+      "default": "Checkout"
+    }
+  },
+  "supports": {
+    "html": false
+  },
+  "editorScript": "file:../../assets/build/endpoint.js"
+}
